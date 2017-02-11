@@ -47,9 +47,9 @@ def main():
 	for work in works:
 		fname = work['source'] + '__' + work['englishTitle'] + '__' + work['language'] + '.json'
 		fname = fname.replace(" ", "")
-		if not os.path.exists('converted_json'):
-			os.makedirs('converted_json')
-		with open('converted_json/' + fname, 'w') as f:
+		if not os.path.exists('cltk_json'):
+			os.makedirs('cltk_json')
+		with open('cltk_json/' + fname, 'w') as f:
 			json.dump(work, f)
 
 if __name__ == '__main__':
